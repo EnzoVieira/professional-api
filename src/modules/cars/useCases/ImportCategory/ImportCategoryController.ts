@@ -1,4 +1,5 @@
 import { Request, Response } from "express-serve-static-core"
+
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase"
 
 class ImportCategoryController {
