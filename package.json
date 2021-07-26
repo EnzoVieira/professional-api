@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "ts-node-dev --respawn --poll --transpile-only --ignore-watch node_modules ./src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,10 @@
     "csv-parse": "^4.16.0",
     "express": "^4.17.1",
     "multer": "^1.4.2",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
+    "typeorm": "^0.2.34",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
