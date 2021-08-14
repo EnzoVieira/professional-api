@@ -1,12 +1,17 @@
+import "reflect-metadata"
 import express from "express"
 import swaggerUi from "swagger-ui-express"
 
-import { router } from "./routes"
-
-import swaggerFile from "./swagger.json"
 import "./database"
 
+import "./shared/container"
+
+import { router } from "./routes"
+import swaggerFile from "./swagger.json"
+
 const server = express()
+
+const PORT = 3333
 
 server.use(express.json())
 
@@ -16,4 +21,4 @@ server.use(router)
 
 server.get("/", (_, res) => res.send("Api funcionando"))
 
-server.listen(3333, () => console.log("API online!"))
+server.listen(PORT, () => console.log(`API online na porta ${PORT}`))
