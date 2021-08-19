@@ -22,7 +22,7 @@ services:
       - 3333:3333
       - 9229:9229
     volumes:
-      - /usr/app/node_modules
+      - .:/usr/app
     links:
       - database
     depends_on:
