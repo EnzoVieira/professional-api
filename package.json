@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --poll --transpile-only --ignore-watch node_modules ./src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --poll --transpile-only --ignore-watch node_modules ./src/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "test": "jest"
   },
   "keywords": [],
@@ -35,6 +35,7 @@
     "jest": "^27.0.6",
     "ts-jest": "^27.0.5",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.3.5"
   }
 }
