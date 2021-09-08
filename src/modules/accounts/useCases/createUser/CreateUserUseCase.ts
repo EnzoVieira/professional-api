@@ -4,7 +4,7 @@ import { hash } from "bcryptjs"
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO"
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository"
 
-import { AppError } from "@errors/AppErrors"
+import { AppError } from "@shared/errors/AppErrors"
 
 @injectable()
 class CreateUserUseCase {
