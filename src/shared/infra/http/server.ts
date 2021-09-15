@@ -3,7 +3,7 @@ import express, { NextFunction, Request, Response } from "express"
 import "express-async-errors"
 import swaggerUi from "swagger-ui-express"
 
-import "../typeorm/database"
+import createConnection from "../typeorm/database"
 
 import "@shared/container"
 
@@ -11,6 +11,7 @@ import { AppError } from "@shared/errors/AppErrors"
 import { router } from "./routes"
 import swaggerFile from "../../../swagger.json"
 
+createConnection()
 const server = express()
 
 const PORT = 3333
